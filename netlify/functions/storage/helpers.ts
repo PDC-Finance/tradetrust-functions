@@ -44,12 +44,12 @@ export const uploadDocument = async (document) => {
 };
 
 export const uploadDocumentAtId = async (document, documentId: string) => {
-  const { chainId } = await validateNetwork(document);
+  //const { chainId } = await validateNetwork(document);
 
-  await validateDocument({
-    document,
-    network: SUPPORTED_NETWORKS[chainId as CHAIN_ID]?.name,
-  });
+  // await validateDocument({
+  //   document,
+  //   network: SUPPORTED_NETWORKS[chainId as CHAIN_ID]?.name,
+  // });
 
   const { key: existingKey } = await getDocument(documentId);
   const { encryptedDocument, encryptedDocumentKey } =
