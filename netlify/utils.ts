@@ -35,7 +35,7 @@ export const corsOrigin = (
     return callback(null, true);
   } else if (
     LOCALHOST_ORIGINS.includes(origin) &&
-    process.env.NODE_ENV === "test"
+    process.env.NODE_ENV === "development"
   ) {
     return callback(null, true);
   } else {
